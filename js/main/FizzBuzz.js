@@ -21,16 +21,28 @@ class FizzBuzz {
     getOutput(num) {
         let returnStr = "";
 
-        if ( this.isFizzBuzz(num) ) {
-            returnStr = "FizzBuzz";
-        } else if ( isFizz(num) ) {
-            returnStr = "Fizz";
-        } else if ( isBuzz(num) ) {
-            returnStr = "Buzz";
-        } else {
-            returnStr = num;
+        // Implicit and Explicit Method Calling Notes Below
+        // General structure of method calling: ___ . ___
+        // In other words: Implicit . methodName(Explicit) 
+        // Basically means 
+        // F(Implicit, Explicit), in math terms
+
+        // Other important thing to note regarding method calling:
+        // Unlike in Java, you MUST say "this" when referring to an implicit argument
+
+        for (let i = 0; i <= num; i++) { // Stops at num
+            if ( this.isFizzBuzz(i) ) {
+                returnStr += "FizzBuzz ";
+            } else if ( this.isFizz(i) ) {
+                returnStr += "Fizz ";
+            } else if ( this.isBuzz(i) ) {
+                returnStr += "Buzz ";
+            } else {
+                returnStr += i + " ";
+            }
         }
 
+        returnStr.trim();
         return returnStr;
     }
   }
