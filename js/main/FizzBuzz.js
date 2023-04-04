@@ -1,23 +1,37 @@
 class FizzBuzz {
     constructor(fizz, buzz) {
-      this.fizz = fizz;
+      this.fizz = fizz; 
       this.buzz = buzz;
     }
-  
+
     isFizz(num) {
-        return null;
+        // Turkey Operator
+        // condition ? trueValue : falseValue;
+        return num == 0 ? true : num % this.fizz == 0; 
     }
-  
+
     isBuzz(num) {
-        return null;
+        return num == 0 ? true : num % this.buzz == 0; 
     }
-  
+
     isFizzBuzz(num) {
-        return null;
+        return this.isFizz(num) && this.isBuzz(num); 
     }
-  
+
     getOutput(num) {
-        return null;
+        let returnStr = "";
+
+        if ( this.isFizzBuzz(num) ) {
+            returnStr = "FizzBuzz";
+        } else if ( isFizz(num) ) {
+            returnStr = "Fizz";
+        } else if ( isBuzz(num) ) {
+            returnStr = "Buzz";
+        } else {
+            returnStr = num;
+        }
+
+        return returnStr;
     }
   }
   

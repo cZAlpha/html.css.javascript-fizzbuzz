@@ -13,7 +13,7 @@ class IsFizzBuzzTest {
     }
   
     testNegativeFizzBuzz() {
-      test(true, this.fb, this.fb.isFizzBuzz, 16);
+      test(false, this.fb, this.fb.isFizzBuzz, 16);
     }
   
     testEdgeCaseFizzBuzz() {
